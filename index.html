@@ -1,0 +1,94 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Portfólio - Erick Branquinho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="janela-principal" class="janela-xp">
+        <div class="janela-xp-titulo">
+            Welcome to my site!
+            <div class="janela-xp-botoes">
+                <span class="janela-xp-botao minimizar"></span>
+                <span class="janela-xp-botao maximizar"></span>
+                <span class="janela-xp-botao fechar"></span>
+            </div>
+        </div>
+        <div class="janela-xp-conteudo">
+            <header>
+                <h1>Erick Branquinho Machado</h1>
+                <h2>Software Engineer</h2>
+                <h2>Computer Science undergraduate @ PUCRS</h2>
+            </header>
+        </div>
+    </div>
+
+    <div class="janelas-container">
+
+        <div id="sobre-janela" class="janela-xp">
+            <div class="janela-xp-titulo">
+                About.txt
+                <div class="janela-xp-botoes"><span class="janela-xp-botao minimizar"></span><span class="janela-xp-botao maximizar"></span><span class="janela-xp-botao fechar"></span></div>
+            </div>
+            <div class="janela-xp-conteudo">
+                
+                <img src="imgs/erick.png" alt="Photo of Erick Branquinho" class="foto-perfil">
+                <h3>About Me</h3
+                <p>Hello! I'm a software engineer currently studying computer science at PUCRS.</p>
+                <br>
+                <p> I'm always looking for a new challenge to improve my skills and my knowledge. </p>
+                <p> My areas of interest are: </p>
+                <ul>
+                    <li>Data analysis</li>
+                    <li>Computer vision</li>
+                    <li>Game development</li>
+                    <li>Backend development</li>
+                </ul>
+                <p> You can check my resume  <a href="Curriculo_2025_ptbr.pdf">here</a>. </p>
+            </div>
+        </div>
+
+        <div id="projetos-janela" class="janela-xp">
+            <div class="janela-xp-titulo">
+                My Projects
+                <div class="janela-xp-botoes"><span class="janela-xp-botao minimizar"></span><span class="janela-xp-botao maximizar"></span><span class="janela-xp-botao fechar"></span></div>
+            </div>
+            <div class="janela-xp-conteudo">
+                <h3>Recent Projects</h3>
+                <div class="projeto-item">
+                    <img src="imgs/pose_landmarks_index.png" alt="Foto do Projeto 2">
+                    <div class="projeto-info">
+                        <h4>Physiotherapy CV</h4>
+                        <p>A computer vision application capable of monitoring the execution of physical exercises giving
+                             users feedback in real time. Uses the Mediapipe Pose Landmarker model to detect 
+                             the pacients body parts and OpenCV to plot the infered skeleton.
+                        </p>
+                        <a href="https://github.com/Erick080/physiotherapy_cv">Github Repository</a>
+                    </div>
+                </div>
+                <div class="projeto-item">
+                    <img src="imgs/davint.png" alt="Foto do Projeto 1">
+                    <div class="projeto-info">
+                        <h4>Streamvis Enhanced</h4>
+                        <p> A data analysis dashboard developed with the <a href="https://www.inf.pucrs.br/davint/">DaVint</a> research group. </p>
+                        <p> Implements a pipeline to collect YouTube livestream comments and classify
+                            the toxicity and sentiment of each comment using natural language processing models.
+                            After processing the results, shows a dashboard with graphs and wordclouds 
+                            of relevant information using Streamlit.</p>
+                        <a href="https://github.com/DAVINTLAB/StreamVisEnhanced">Github Repository</a>
+                    </div>
+                </div>
+                <div class="projeto-item">
+                    <img src="imgs/koala.jpeg" alt="Foto do Projeto 3">
+                    <div class="projeto-info">
+                        <h4>Koala Bot</h4>
+                        <p>Simple Discord bot with audio player and dice rolls functionality.</p>
+                        <a href="https://github.com/Erick080/koala_bot">Github Repository</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>

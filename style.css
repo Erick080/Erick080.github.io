@@ -1,0 +1,222 @@
+body {
+    background-image: url("imgs/h0lBtpi.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.janela-xp {
+    /* Estilo base que todas as 3 janelas usarão */
+    border: 2px solid #0a74c3;
+    background-color: #f0f0f0;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.janela-xp-titulo {
+    background-color: #0a74c3;
+    color: white;
+    padding: 8px 15px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: default;
+    user-select: none
+}
+
+.janela-xp-botoes {
+    display: flex;
+    align-items: center
+}
+
+.janela-xp-botao {
+    width: 21px;
+    height: 21px;
+    margin-left: 3px;
+    background-color: #0a74c3;
+    border: 1px solid #fff;
+    box-shadow: inset 1px 1px 0 #3a9cff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    font-size: 0
+}
+
+.janela-xp-botao.minimizar::before {
+    content: '';
+    width: 9px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    bottom: 4px
+}
+
+.janela-xp-botao.maximizar::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    border: 2px solid white;
+    position: absolute
+}
+
+.janela-xp-botao.fechar {
+    background-color: #e81123;
+    box-shadow: inset 1px 1px 0 #ff646c
+}
+
+.janela-xp-botao.fechar::before,
+.janela-xp-botao.fechar::after {
+    content: '';
+    width: 11px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    transform-origin: center
+}
+
+.janela-xp-botao.fechar::before {
+    transform: rotate(45deg)
+}
+
+.janela-xp-botao.fechar::after {
+    transform: rotate(-45deg)
+}
+
+.janela-xp-conteudo {
+    padding: 20px
+}
+
+/* Estilo da JANELA PRINCIPAL */
+#janela-principal {
+    width: 60%;
+    max-width: 800px;
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* Estilo do CONTAINER das janelas de baixo */
+.janelas-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0 30px 30px 30px;
+    gap: 30px;
+}
+
+/* Estilo das JANELAS DE BAIXO */
+.janelas-container .janela-xp {
+    width: 45%;
+    min-width: 400px;
+}
+
+/* Scroll para a janela de PROJETOS */
+#projetos-janela .janela-xp-conteudo {
+    max-height: 550px;
+    /* Altura máxima antes de a rolagem aparecer */
+    overflow-y: auto;
+    /* Adiciona a barra de rolagem vertical */
+}
+
+/* Estilos da lista de projetos */
+.projeto-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd
+}
+
+.projeto-item:last-child {
+    border-bottom: none
+}
+
+.projeto-item img {
+    width: 80px;
+    height: 90px;
+    object-fit: cover;
+    border: 1px solid #ccc
+}
+
+.projeto-info h3,
+.projeto-info h4 {
+    margin-top: 0
+}
+
+.foto-perfil {
+    float: left; /* Faz o texto contornar a imagem pela direita */
+    width: 100px;  /* Defina o tamanho que preferir */
+    height: 100px;
+    object-fit: cover; /* Garante que a foto não fique distorcida */
+    
+    /* Adiciona um espaço entre a foto e o texto */
+    margin-right: 15px; 
+    margin-bottom: 5px;
+
+    /* Estilo visual (escolha o que preferir) */
+    
+    /* Opção A: Foto circular (moderno) */
+    /*border-radius: 50%; */
+    
+    /* Opção B: Borda sutil (mais alinhado ao tema XP) */
+    border: 2px solid #a0a0a0;
+    box-shadow: 1px 1px 0 #fff;
+}
+
+/* =============================================== */
+/* ESTILOS PARA DISPOSITIVOS MÓVEIS                */
+/* =============================================== */
+
+@media (max-width: 768px) {
+
+    /* Ajusta o container das janelas inferiores para empilhar */
+    .janelas-container {
+        flex-direction: column; 
+        align-items: center;    
+        padding: 15px; 
+        gap: 20px; 
+    }
+
+    /* Faz TODAS as janelas ocuparem quase toda a largura da tela */
+    #janela-principal,
+    .janelas-container .janela-xp {
+        width: 95%; 
+        min-width: 0;
+        margin: 15px auto;
+    }
+
+    /* Ajusta o tamanho das fontes para melhor legibilidade */
+    .janela-xp-conteudo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .janela-xp-conteudo h2 {
+        font-size: 1.1rem;
+    }
+    
+    .janela-xp-conteudo h3 {
+        font-size: 1.0rem;
+    }
+
+    /* Ajusta o layout de cada item de projeto */
+    .projeto-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .projeto-item img {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    
+    /* Aumenta a altura máxima da janela de projetos para compensar a tela mais alta */
+    #projetos-janela .janela-xp-conteudo {
+        max-height: 500px;
+    }
+
+}
